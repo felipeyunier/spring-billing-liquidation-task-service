@@ -17,11 +17,14 @@ public class SpringBillingLiquidationTaskServiceApplication implements CommandLi
 
 	@Override
 	public void run(String... args) throws Exception {
-		try {
+		String stringJoin = String.join(",", args);
+		System.out.println("aegumentos -> "+ stringJoin);
+		
+		try {			
 			Thread.sleep(5*1000);
-			LOGGER.info("LIQUIDATION: Task with argument {} was finished", args.toString());
+			LOGGER.info("LIQUIDATION: Task with argument {} was finished", stringJoin);
 		} catch (InterruptedException e) {
-			LOGGER.info("LIQUIDATION: with argument  {} with error", args.toString(), e);
+			LOGGER.info("LIQUIDATION: with argument  {} with error", args, e);
 			throw e;
 		}
 	}
