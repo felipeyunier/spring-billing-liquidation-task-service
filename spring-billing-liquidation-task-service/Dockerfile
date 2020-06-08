@@ -8,6 +8,9 @@
 #docker build -t felipeyunier/spring-billing-liquidation-task-service .
 #docker build -t felipeyunier/spring-billing-liquidation-task-service:0.0.1-SNAPSHOT .
 
+#push de la image en docker hub
+#docker push felipeyunier/spring-billing-liquidation-task-service:0.0.1-SNAPSHOT
+
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
